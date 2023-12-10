@@ -12,11 +12,11 @@
 - berikut penjelasan mengenai kredensial di atas
 	url merupakan link yang dapat menghubungkan aplikasi dengan server, bila anda menggunakan localhost maka bisa menggunakan 
 	```
-	localhost:27017
+	mongodb://localhost:27017
 	```
 
-	DBNAME merupakan nama database 
-	DBCOLL merupakan nama collection
+	- DBNAME merupakan nama database 
+	- DBCOLL merupakan nama collection
 
 	tetapi di folder ini saya telah menambahkan local.env web, bila ingin langsung mencoba aplikasi tanpa configurasi terlebih dahulu
 
@@ -40,24 +40,24 @@
 	```
 	 go test ./... -coverprofile=cover.out && go tool cover -html=cover.out
 	```
-## Endpoint Notes
-### Membuat catatan baru
-```
-POST /notes
-```
-### Mengambil semua catatan
-```
-GET /notes
-```
-### Mengambil satu catatan dengan id tertentu
-```
-GET /notes/:id
-```
-### Memperbarui catatan dengan id tertentu
-```
-PUT /notes/:id
-```
-### Menghapus catatan dengan id tertentu
-```
-DELETE /notes/:id
-```
+	## Endpoint Notes
+	### Membuat catatan baru
+	```
+	POST /notes
+	```
+	### Mengambil semua catatan
+	```
+	GET /notes
+	```
+	### Mengambil satu catatan dengan id tertentu
+	```
+	GET /notes/:id
+	```
+	### Memperbarui catatan dengan id tertentu
+	```
+	PUT /notes/:id
+	```
+	### Menghapus catatan dengan id tertentu
+	```
+	DELETE /notes/:id
+	```
