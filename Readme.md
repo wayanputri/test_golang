@@ -21,22 +21,22 @@
 	tetapi di folder ini saya telah menambahkan local.env web, bila ingin langsung mencoba aplikasi tanpa configurasi terlebih dahulu
 
 ## Documentasi dan test
-	untuk documentasi digunakan swagger, dengan library swago
+- untuk documentasi digunakan swagger, dengan library swago
 
 ### mengakses swagger
-	- jalankan aplikasi dengan mengetik di terminal
+- jalankan aplikasi dengan mengetik di terminal
 	```
 	go run main.go
 	```
-	lalu kita ke browser dengan mengakses
+- lalu kita ke browser dengan mengakses
 	```
 	http://localhost:8080/swagger/index.html
 	```
-	untuk panduan lengkapnya dapat mengakses 
+- untuk panduan lengkapnya dapat mengakses 
 	* [Swago documentasi](https://github.com/swaggo/swag)
 
 ## Menjalankan Testing
-	aplikasi ini juga disediakan testing di layer service, untuk menjalankan testing dapat mengetik 
+- aplikasi ini juga disediakan testing di layer service, untuk menjalankan testing dapat mengetik 
 	```
 	 go test ./... -coverprofile=cover.out && go tool cover -html=cover.out
 	```
