@@ -1,0 +1,167 @@
+basePath: /
+definitions:
+  handler.NotesRequest:
+    properties:
+      content:
+        type: string
+      title:
+        type: string
+    type: object
+  helper.Response:
+    properties:
+      data: {}
+      message:
+        type: string
+      meta: {}
+      status:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    name: API Support
+  description: Notes API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Notes API
+  version: "1.0"
+paths:
+  /notes:
+    get:
+      consumes:
+      - application/json
+      description: list Notes
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/helper.Response'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/helper.Response'
+      summary: list Notes
+      tags:
+      - Notes
+    post:
+      consumes:
+      - application/json
+      description: create new Note with the provided details
+      parameters:
+      - description: New Note
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/handler.NotesRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/helper.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/helper.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/helper.Response'
+      summary: Create Note
+      tags:
+      - Notes
+  /notes/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a Note by its Id
+      parameters:
+      - description: Note ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/helper.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/helper.Response'
+      summary: Delete Note
+      tags:
+      - Notes
+    get:
+      consumes:
+      - application/json
+      description: get note by id  with id note
+      parameters:
+      - description: Note ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/helper.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/helper.Response'
+      summary: Note By Id
+      tags:
+      - Notes
+    put:
+      consumes:
+      - application/json
+      description: update Note with the provided details
+      parameters:
+      - description: Note ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Updates Note
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/handler.NotesRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/helper.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/helper.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/helper.Response'
+      summary: Update Notes
+      tags:
+      - Notes
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"

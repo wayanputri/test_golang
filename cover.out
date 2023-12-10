@@ -1,0 +1,25 @@
+mode: set
+test_backend/features/notes/service/logic.go:17.79,19.16 2 1
+test_backend/features/notes/service/logic.go:19.16,21.3 1 1
+test_backend/features/notes/service/logic.go:22.2,22.12 1 1
+test_backend/features/notes/service/logic.go:26.101,28.19 2 1
+test_backend/features/notes/service/logic.go:28.19,30.3 1 1
+test_backend/features/notes/service/logic.go:31.2,31.24 1 1
+test_backend/features/notes/service/logic.go:31.24,33.3 1 0
+test_backend/features/notes/service/logic.go:34.2,34.22 1 1
+test_backend/features/notes/service/logic.go:34.22,36.3 1 0
+test_backend/features/notes/service/logic.go:37.2,38.16 2 1
+test_backend/features/notes/service/logic.go:38.16,40.3 1 1
+test_backend/features/notes/service/logic.go:41.2,41.12 1 1
+test_backend/features/notes/service/logic.go:45.97,47.16 2 1
+test_backend/features/notes/service/logic.go:47.16,49.3 1 1
+test_backend/features/notes/service/logic.go:51.2,51.18 1 1
+test_backend/features/notes/service/logic.go:55.87,57.16 2 1
+test_backend/features/notes/service/logic.go:57.16,59.3 1 1
+test_backend/features/notes/service/logic.go:60.2,60.18 1 1
+test_backend/features/notes/service/logic.go:64.96,66.24 2 1
+test_backend/features/notes/service/logic.go:66.24,68.3 1 1
+test_backend/features/notes/service/logic.go:69.2,70.16 2 1
+test_backend/features/notes/service/logic.go:70.16,72.3 1 1
+test_backend/features/notes/service/logic.go:73.2,73.16 1 1
+test_backend/features/notes/service/logic.go:76.72,81.2 1 1
